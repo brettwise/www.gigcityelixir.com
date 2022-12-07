@@ -2,7 +2,7 @@ import { css } from "@emotion/core";
 import Footer from "../components/Footer";
 import GCEHead from "../components/GCEHead";
 import Logo from "../components/Logo";
-import CancellationNote from "../components/sections/CancellationNote";
+import ReturningAnnouncement from "../components/sections/ReturningAnnouncement";
 import { SkipToNavLink } from "../components/SkipToNav";
 import { breakpoint } from "../utils/breakpoints";
 import { colors } from "../utils/constants";
@@ -44,7 +44,7 @@ export default function Index() {
               }
             `}
           >
-            <CancellationNote />
+            <ReturningAnnouncement />
           </div>
         </Hero>
       </Main>

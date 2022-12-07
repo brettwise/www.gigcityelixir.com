@@ -33,7 +33,7 @@ const linkCss = css`
   }
 `;
 
-const CancellationNote = () => (
+const ReturningAnnouncement = () => (
   <section
     css={css`
       padding: ${typography.rhythm(2)};
@@ -45,11 +45,15 @@ const CancellationNote = () => (
       }
     `}
   >
-    <p>GigCityElixir is coming back!</p>
+    <p>
+      <strong>GigCityElixir is coming back!</strong>
+    </p>
     <p>
       When we reflect on what makes GCE special, we know it's the community
-      connections we make and strengthen while we are together. We are delighted
-      to plan an in person conference in Chattanooga in 2023!
+      connections we make and strengthen while we are together.{" "}
+      <em>
+        We are delighted to plan an in person conference in Chattanooga in 2023!
+      </em>
     </p>
     <p>
       May 19-20, 2023
@@ -70,5 +74,4 @@ const CancellationNote = () => (
   </section>
 );
 
-export default CancellationNote;
-a;
+export default ReturningAnnouncement;
