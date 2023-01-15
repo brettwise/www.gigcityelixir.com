@@ -2,9 +2,11 @@ import { css } from "@emotion/core";
 import DateAndVenue from "../components/DateAndVenue";
 import Footer from "../components/Footer";
 import GCEHead from "../components/GCEHead";
+import HR from "../components/HR";
 import Logo from "../components/Logo";
 import ReturningAnnouncement from "../components/sections/ReturningAnnouncement";
 import SpeakerSection from "../components/sections/SpeakerSection";
+import SponsorSection from "../components/sections/SponsorSection";
 import { SkipToNavLink } from "../components/SkipToNav";
 import { breakpoint } from "../utils/breakpoints";
 import { colors } from "../utils/constants";
@@ -51,6 +53,8 @@ export default function Index() {
           </div>
         </Hero>
         <SpeakerSection />
+        <HR />
+        <SponsorSection />
       </Main>
       <Footer />
     </Wrapper>
