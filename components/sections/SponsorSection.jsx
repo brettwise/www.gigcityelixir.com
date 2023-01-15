@@ -25,14 +25,10 @@ const platinumSponsors = css`
 `;
 
 const flexGrid = css`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -${typography.rhythm(1)};
   margin-bottom: ${typography.rhythm(1)};
 `;
 
 const flexGridItem = css`
-  margin-left: ${typography.rhythm(1)};
   ${breakpoint("large")} {
     width: calc(50% - ${typography.rhythm(1)});
   }

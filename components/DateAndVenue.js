@@ -8,7 +8,6 @@ export default function DateAndVenue({ extraCss }) {
     <div
       className="ff-odudomono-l"
       css={css`
-        grid-area: top;
         text-transform: uppercase;
         letter-spacing: 0.3333ch;
         margin: ${typography.rhythm(1 / 2)};
@@ -18,6 +17,16 @@ export default function DateAndVenue({ extraCss }) {
         ${breakpoint("medium")} {
           font-size: 1rem;
         }
+
+        @supports (display: grid) {
+          ${breakpoint("medium")} {
+            margin: ${typography.rhythm(3)} 0 0;
+            grid-area: top;
+            padding: ${typography.rhythm(2)} ${typography.rhythm(2)}
+              ${typography.rhythm(1)};
+          }
+        }
+
         ${extraCss}
       `}
     >
