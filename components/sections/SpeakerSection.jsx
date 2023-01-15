@@ -14,40 +14,40 @@ export default function SpeakerSection() {
         `}
       >
         <Bio
-          // imgSrc="bruce.jpg"
-          name="Bruce Tate"
-          twitterHandle="redrapids"
-          href="/bruce-tate"
-        />
-        <Bio
-          // imgSrc="frank.jpg"
-          name="Frank Hunleth"
-          href="/frank-hunleth"
-          twitterHandle="fhunleth"
-        />
-        <Bio
-          // imgSrc="osa.jpg"
-          name="Osa Gaius"
-          // href="/osa-gaius"
-          // twitterHandle="redrapids"
-        />
-        <Bio
           // imgSrc="alexa.jpg"
           name="Alexa Hunleth"
           // href="/alexa-hunleth"
           // twitterHandle="fhunleth"
         />
         <Bio
-          // imgSrc="randall.jpg"
-          name="Randall Thomas"
-          // href="/randall-thomas"
+          // imgSrc="bruce.jpg"
+          name="Bruce Tate"
           // twitterHandle="redrapids"
+          // href="/bruce-tate"
+        />
+        <Bio
+          // imgSrc="frank.jpg"
+          name="Frank Hunleth"
+          // href="/frank-hunleth"
+          // twitterHandle="fhunleth"
         />
         <Bio
           // imgSrc="greg.jpg"
           name="Greg Mefford"
           // href="/greg-mefford"
-          // twitterHandle="fhunleth"
+          // twitterHandle="ferggo"
+        />
+        <Bio
+          // imgSrc="osa.jpg"
+          name="Osa Gaius"
+          // href="/osa-gaius"
+          // twitterHandle="osagaius"
+        />
+        <Bio
+          // imgSrc="randall.jpg"
+          name="Randall Thomas"
+          // href="/randall-thomas"
+          // twitterHandle="redrapids"
         />
       </div>
     </SectionWrapper>
