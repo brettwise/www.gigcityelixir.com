@@ -2,7 +2,7 @@ import { css } from "@emotion/core";
 import DateAndVenue from "../components/DateAndVenue";
 import Footer from "../components/Footer";
 import GCEHead from "../components/GCEHead";
-import HR from "../components/HR";
+import Hr from "../components/Hr";
 import Logo from "../components/Logo";
 import ReturningAnnouncement from "../components/sections/ReturningAnnouncement";
 import SpeakerSection from "../components/sections/SpeakerSection";
@@ -53,7 +53,7 @@ export default function Index() {
           </div>
         </Hero>
         <SpeakerSection />
-        <HR />
+        <Hr />
         <SponsorSection />
       </Main>
       <Footer />
