@@ -1,4 +1,5 @@
 import { css } from "@emotion/core";
+import DateAndVenue from "../components/DateAndVenue";
 import Footer from "../components/Footer";
 import GCEHead from "../components/GCEHead";
 import Logo from "../components/Logo";
@@ -34,6 +35,7 @@ export default function Index() {
               `}
             />
           </HeroLeft>
+          <DateAndVenue />
           <div
             css={css`
               grid-area: mid;
