@@ -8,6 +8,7 @@ export default function DateAndVenue({ extraCss }) {
     <div
       className="ff-odudomono-l"
       css={css`
+        grid-area: top;
         text-transform: uppercase;
         letter-spacing: 0.3333ch;
         margin: ${typography.rhythm(1 / 2)};

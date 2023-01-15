@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import GCEHead from "../components/GCEHead";
 import Logo from "../components/Logo";
 import ReturningAnnouncement from "../components/sections/ReturningAnnouncement";
+import SpeakerSection from "../components/sections/SpeakerSection";
 import { SkipToNavLink } from "../components/SkipToNav";
 import { breakpoint } from "../utils/breakpoints";
 import { colors } from "../utils/constants";
@@ -49,6 +50,7 @@ export default function Index() {
             <ReturningAnnouncement />
           </div>
         </Hero>
+        <SpeakerSection />
       </Main>
       <Footer />
     </Wrapper>

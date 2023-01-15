@@ -10,11 +10,10 @@ const Bio = ({
   twitterLink,
   twitterHandle,
   siteLink,
-  siteTitle
+  siteTitle,
 }) => (
   <div
     css={`
-      display: inline-block;
       text-align: center;
     `}
   >
