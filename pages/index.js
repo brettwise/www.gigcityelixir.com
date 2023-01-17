@@ -1,8 +1,12 @@
 import { css } from "@emotion/core";
+import DateAndVenue from "../components/DateAndVenue";
 import Footer from "../components/Footer";
 import GCEHead from "../components/GCEHead";
+import Hr from "../components/Hr";
 import Logo from "../components/Logo";
-import CancellationNote from "../components/sections/CancellationNote";
+import ReturningAnnouncement from "../components/sections/ReturningAnnouncement";
+import SpeakerSection from "../components/sections/SpeakerSection";
+import SponsorSection from "../components/sections/SponsorSection";
 import { SkipToNavLink } from "../components/SkipToNav";
 import { breakpoint } from "../utils/breakpoints";
 import { colors } from "../utils/constants";
@@ -34,6 +38,7 @@ export default function Index() {
               `}
             />
           </HeroLeft>
+          <DateAndVenue />
           <div
             css={css`
               grid-area: mid;
@@ -44,9 +49,12 @@ export default function Index() {
               }
             `}
           >
-            <CancellationNote />
+            <ReturningAnnouncement />
           </div>
         </Hero>
+        <SpeakerSection />
+        <Hr />
+        <SponsorSection />
       </Main>
       <Footer />
     </Wrapper>
