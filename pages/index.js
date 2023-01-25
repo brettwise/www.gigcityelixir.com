@@ -1,4 +1,5 @@
 import { css } from "@emotion/core";
+import { primaryButtonCss } from "../components/Button";
 import DateAndVenue from "../components/DateAndVenue";
 import Footer from "../components/Footer";
 import GCEHead from "../components/GCEHead";
@@ -49,6 +50,7 @@ export default function Index() {
               }
             `}
           >
+            <Registration />
             <ReturningAnnouncement />
           </div>
         </Hero>
@@ -149,6 +151,32 @@ function HeroLeft({ children }) {
       `}
     >
       {children}
+    </div>
+  );
+}
+
+function Registration() {
+  return (
+    <div
+      css={css`
+        padding: ${typography.rhythm(2)} ${typography.rhythm(1)};
+        background-color: ${colors.plum};
+        @supports (display: grid) {
+          ${breakpoint("medium")} {
+            padding: ${typography.rhythm(0.5)} ${typography.rhythm(2)};
+          }
+        }
+      `}
+    >
+      <a
+        css={css`
+          ${primaryButtonCss}
+          font-size: 1.15rem;
+        `}
+        href="https://ti.to/groxio-llc/gig-city-elixir-2023"
+      >
+        Early Bird Tickets Available Now!
+      </a>
     </div>
   );
 }

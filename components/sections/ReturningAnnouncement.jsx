@@ -62,7 +62,6 @@ const ReturningAnnouncement = () => (
       <br />
       Chattanooga, TN
     </p>
-    <p>Tickets will go on sale in late January.</p>
     <p>
       Right now we are looking for sponsors (all levels) and speakers! If you
       are interested in partnering with us, <br />
