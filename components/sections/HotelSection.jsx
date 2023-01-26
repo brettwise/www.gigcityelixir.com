@@ -1,6 +1,9 @@
 import React from "react";
+import { css } from "@emotion/core";
 import SectionWrapper from "../SectionWrapper";
 import { buttonCss } from "../Button";
+import { typography } from "../../utils/typography";
+import { colors, hues } from "../../utils/constants";
 
 const HotelSection = () => (
   <SectionWrapper
@@ -17,12 +20,36 @@ const HotelSection = () => (
       It also is a few minutes walk from the finest restaurants in the city,
       live music, and more.
     </p>
-    <a
-      href="https://www.marriott.com/events/start.mi?id=1579722626142&key=GRP"
-      css={buttonCss}
+    <div
+      css={css`
+        padding: ${typography.rhythm(1)};
+        border-radius: 3px;
+        border: 1px solid ${colors.peachy_plum};
+        background: ${colors.blush};
+      `}
     >
-      Book a Room at the Moxy
-    </a>
+      <p>
+        Our conference is the same weekend as the IRONMAN Chattanooga, so don't
+        delay and get your rooms booked!
+      </p>
+      <a
+        href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1674143445948&key=GRP&app=resvlink"
+        css={buttonCss}
+      >
+        Book a Room at the Moxy
+      </a>
+    </div>
+    <address
+      css={css`
+        margin: ${typography.rhythm(1)} 0 0;
+      `}
+    >
+      <span>MOXY Chattanooga Downtown</span>
+      <br />
+      1220 King Street
+      <br />
+      Chattanooga, Tennessee 37403
+    </address>
   </SectionWrapper>
 );
 

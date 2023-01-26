@@ -3,6 +3,7 @@ import { primaryButtonCss } from "../components/Button";
 import DateAndVenue from "../components/DateAndVenue";
 import Footer from "../components/Footer";
 import GCEHead from "../components/GCEHead";
+import HotelSection from "../components/sections/HotelSection";
 import Hr from "../components/Hr";
 import Logo from "../components/Logo";
 import ReturningAnnouncement from "../components/sections/ReturningAnnouncement";
@@ -57,6 +58,8 @@ export default function Index() {
         <SpeakerSection />
         <Hr />
         <SponsorSection />
+        <Hr />
+        <HotelSection />
       </Main>
       <Footer />
     </Wrapper>
