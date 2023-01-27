@@ -49,6 +49,7 @@ export default function SpeakerSection() {
           // href="/randall-thomas"
           // twitterHandle="redrapids"
         />
+        <AndMore />
       </div>
     </SectionWrapper>
   );
@@ -119,6 +120,45 @@ function Bio({ children, href, imgSrc, name, twitterHandle, githubUser }) {
           <a href={`https://github.com/${githubUser}`}>{githubUser}</a>
         </div>
       )}
+    </div>
+  );
+}
+
+function AndMore() {
+  return (
+    <div
+      className="ff-odudomono-r"
+      css={css`
+        border-radius: 3px;
+        margin-left: ${typography.rhythm(1)};
+        margin-top: ${typography.rhythm(1)};
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      `}
+    >
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+        `}
+      >
+        <div
+          css={css`
+            text-transform: uppercase;
+            border: 1px solid ${colors.plum};
+            letter-spacing: 1px;
+            color: colors.plum;
+            padding: ${typography.rhythm(1 / 3)};
+            flex-grow: 1;
+          `}
+        >
+          And more to come!
+        </div>
+      </div>
     </div>
   );
 }
