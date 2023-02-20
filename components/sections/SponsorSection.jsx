@@ -74,6 +74,24 @@ const SubscriptionSection = () => (
             />
           </figure>
         </Platinum>
+        <Platinum url="https://www.wyeworks.com/">
+          <figure>
+            <img
+              src="/static/sponsor-logos/Wyeworks-Logo-Black-Red.png"
+              alt="WyeWorks"
+              css={css`
+                padding: 5rem 2rem 2rem;
+              `}
+            />
+            <p>
+              WyeWorks is a team of expert consultants with 15+ years building
+              software people love and enabling companies to succeed, by
+              crafting high quality solutions using Elixir. We are the partner
+              you can trust, and we'll help you build the right thing right.
+              Let’s build the next big thing together!
+            </p>
+          </figure>
+        </Platinum>
       </div>
       <Link href="/contact">
         <a href="/contact" css={buttonCss}>
