@@ -2,29 +2,30 @@ import React from "react";
 import SectionWrapper from "../SectionWrapper";
 import { css } from "@emotion/core";
 import { typography } from "../../utils/typography";
+import { breakpoint } from "../../utils/breakpoints";
 import { colors } from "../../utils/constants";
 
 const speakers = [
-  "Alexa Hunleth",
-  "Amos King",
-  "Andrew Ek",
-  "Ben Wheat",
-  "Bruce Tate",
-  "Bryan Hunter",
-  "Chris Keathley",
-  "Eric Oestrich",
-  "Frank Hunleth",
-  "Greg Mefford",
-  "Jeffrey Matthias",
-  "Joshua Plicque",
-  "Kimberly Johnson",
-  "Melvin Cedeno",
-  "Osa Gaius",
-  "Randall Thomas",
-  "Scott Southworth",
-  "Sean Moriarity",
-  "Steve Bussey",
-  "Zach Daniel",
+  { name: "Alexa Hunleth" },
+  { name: "Amos King" },
+  { name: "Andrew Ek", imgSrc: "andrew-ek.jpeg" },
+  { name: "Ben Wheat" },
+  { name: "Bruce Tate", imgSrc: "bruce.jpg" },
+  { name: "Bryan Hunter" },
+  { name: "Chris Keathley" },
+  { name: "Eric Oestrich" },
+  { name: "Frank Hunleth" },
+  { name: "Greg Mefford" },
+  { name: "Jeffrey Matthias" },
+  { name: "Joshua Plicque" },
+  { name: "Kimberly Johnson" },
+  { name: "Melvin Cedeno" },
+  { name: "Osa Gaius" },
+  { name: "Randall Thomas" },
+  { name: "Scott Southworth" },
+  { name: "Sean Moriarity" },
+  { name: "Steve Bussey" },
+  { name: "Zach Daniel" },
 ];
 
 export default function SpeakerSection() {
@@ -33,17 +34,20 @@ export default function SpeakerSection() {
       <div
         css={css`
           margin-left: -${typography.rhythm(1)};
-          ${"" /* margin-top: -${typography.rhythm(1)}; */}
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          margin-left: ${typography.rhythm(1)};
+          grid-template-columns: 1fr;
+          margin-left: 0;
           gap: 8px;
+
+          ${breakpoint("large")} {
+            grid-template-columns: 1fr 1fr;
+          }
         `}
       >
-        {speakers.map((name) => (
+        {speakers.map(({ name, imgSrc }) => (
           <Bio
             key={name}
-            // imgSrc="alexa.jpg"
+            // imgSrc={imgSrc}
             name={name}
             // href="/alexa-hunleth"
             // twitterHandle="fhunleth"
@@ -70,6 +74,7 @@ function Bio({ children, href, imgSrc, name, twitterHandle, githubUser }) {
           display: block;
           margin-bottom: 0;
           background-color: ${colors.peachy_plum};
+          position: relative;
         }
       `}
     >
@@ -82,14 +87,14 @@ function Bio({ children, href, imgSrc, name, twitterHandle, githubUser }) {
           font-size: 2rem;
         `}
       >
-        <img src={`/static/speakers/${imgSrc}`} alt="" />
+        {imgSrc && <img src={`/static/speakers/${imgSrc}`} alt="" />}
         <div
           css={css`
             background-color: ${colors.plum};
             color: white;
             padding: ${typography.rhythm(1 / 3)};
             flex-grow: 1;
-            ${typography.scale(1 / 3)};
+            ${typography.scale(1 / 4)};
           `}
         >
           {name}
