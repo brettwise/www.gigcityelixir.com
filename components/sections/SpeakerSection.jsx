@@ -25,12 +25,26 @@ const speakers = [
   { name: "Scott Southworth" },
   { name: "Sean Moriarity" },
   { name: "Steve Bussey" },
+  { name: "Vanessa Lee" },
   { name: "Zach Daniel" },
 ];
 
 export default function SpeakerSection() {
   return (
-    <SectionWrapper header="Our Speakers" id="speakers">
+    <SectionWrapper
+      header="Our Speakers"
+      id="speakers"
+      extraCss={css`
+        background-color: ${colors.plum};
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 ${typography.rhythm(1)} ${typography.rhythm(3)};
+
+        h2 {
+          color: white;
+        }
+      `}
+    >
       <div
         css={css`
           margin-left: -${typography.rhythm(1)};
@@ -90,7 +104,7 @@ function Bio({ children, href, imgSrc, name, twitterHandle, githubUser }) {
         {imgSrc && <img src={`/static/speakers/${imgSrc}`} alt="" />}
         <div
           css={css`
-            background-color: ${colors.plum};
+            background-color: ${colors.peachy_plum};
             color: white;
             padding: ${typography.rhythm(1 / 3)};
             flex-grow: 1;
