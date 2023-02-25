@@ -74,6 +74,28 @@ const SubscriptionSection = () => (
             />
           </figure>
         </Platinum>
+        <Platinum url="https://launchscout.com/">
+          <figure
+            css={css`
+              margin: 0;
+            `}
+          >
+            <img
+              src="/static/sponsor-logos/launch-scout.svg"
+              alt="Launch Scout"
+              css={css`
+                width: 100%;
+                margin: 0;
+              `}
+            />
+          </figure>
+        </Platinum>
+      </div>
+    </div>
+
+    <div className={platinumSponsors}>
+      <h3>Gold</h3>
+      <div css={flexGrid}>
         <Platinum url="https://www.wyeworks.com/">
           <figure>
             <img
@@ -93,12 +115,13 @@ const SubscriptionSection = () => (
           </figure>
         </Platinum>
       </div>
-      <Link href="/contact">
-        <a href="/contact" css={buttonCss}>
-          Contact Us About Sponsoring
-        </a>
-      </Link>
     </div>
+
+    <Link href="/contact">
+      <a href="/contact" css={buttonCss}>
+        Contact Us About Sponsoring
+      </a>
+    </Link>
   </SectionWrapper>
 );
 
