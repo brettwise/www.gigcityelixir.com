@@ -2,7 +2,31 @@ import React from "react";
 import SectionWrapper from "../SectionWrapper";
 import { css } from "@emotion/core";
 import { typography } from "../../utils/typography";
+import { breakpoint } from "../../utils/breakpoints";
 import { colors } from "../../utils/constants";
+
+const speakers = [
+  { name: "Alexa Hunleth" },
+  { name: "Amos King" },
+  { name: "Andrew Ek", imgSrc: "andrew-ek.jpeg" },
+  { name: "Ben Wheat" },
+  { name: "Bruce Tate", imgSrc: "bruce.jpg" },
+  { name: "Bryan Hunter" },
+  { name: "Chris Keathley" },
+  { name: "Eric Oestrich" },
+  { name: "Frank Hunleth" },
+  { name: "Greg Mefford" },
+  { name: "Jeffrey Matthias" },
+  { name: "Joshua Plicque" },
+  { name: "Kimberly Johnson" },
+  { name: "Melvin Cedeno" },
+  { name: "Osa Gaius" },
+  { name: "Randall Thomas" },
+  { name: "Scott Southworth" },
+  { name: "Sean Moriarity" },
+  { name: "Steve Bussey" },
+  { name: "Zach Daniel" },
+];
 
 export default function SpeakerSection() {
   return (
@@ -10,46 +34,25 @@ export default function SpeakerSection() {
       <div
         css={css`
           margin-left: -${typography.rhythm(1)};
-          margin-top: -${typography.rhythm(1)};
+          display: grid;
+          grid-template-columns: 1fr;
+          margin-left: 0;
+          gap: 8px;
+
+          ${breakpoint("large")} {
+            grid-template-columns: 1fr 1fr;
+          }
         `}
       >
-        <Bio
-          // imgSrc="alexa.jpg"
-          name="Alexa Hunleth"
-          // href="/alexa-hunleth"
-          // twitterHandle="fhunleth"
-        />
-        <Bio
-          // imgSrc="bruce.jpg"
-          name="Bruce Tate"
-          // twitterHandle="redrapids"
-          // href="/bruce-tate"
-        />
-        <Bio
-          // imgSrc="frank.jpg"
-          name="Frank Hunleth"
-          // href="/frank-hunleth"
-          // twitterHandle="fhunleth"
-        />
-        <Bio
-          // imgSrc="greg.jpg"
-          name="Greg Mefford"
-          // href="/greg-mefford"
-          // twitterHandle="ferggo"
-        />
-        <Bio
-          // imgSrc="osa.jpg"
-          name="Osa Gaius"
-          // href="/osa-gaius"
-          // twitterHandle="osagaius"
-        />
-        <Bio
-          // imgSrc="randall.jpg"
-          name="Randall Thomas"
-          // href="/randall-thomas"
-          // twitterHandle="redrapids"
-        />
-        <AndMore />
+        {speakers.map(({ name, imgSrc }) => (
+          <Bio
+            key={name}
+            // imgSrc={imgSrc}
+            name={name}
+            // href="/alexa-hunleth"
+            // twitterHandle="fhunleth"
+          />
+        ))}
       </div>
     </SectionWrapper>
   );
@@ -61,8 +64,6 @@ function Bio({ children, href, imgSrc, name, twitterHandle, githubUser }) {
       className="ff-odudomono-r"
       css={css`
         border-radius: 3px;
-        margin-left: ${typography.rhythm(1)};
-        margin-top: ${typography.rhythm(1)};
         overflow: hidden;
         text-align: center;
         display: flex;
@@ -73,6 +74,7 @@ function Bio({ children, href, imgSrc, name, twitterHandle, githubUser }) {
           display: block;
           margin-bottom: 0;
           background-color: ${colors.peachy_plum};
+          position: relative;
         }
       `}
     >
@@ -85,13 +87,14 @@ function Bio({ children, href, imgSrc, name, twitterHandle, githubUser }) {
           font-size: 2rem;
         `}
       >
-        <img src={`/static/speakers/${imgSrc}`} alt="" />
+        {imgSrc && <img src={`/static/speakers/${imgSrc}`} alt="" />}
         <div
           css={css`
             background-color: ${colors.plum};
             color: white;
             padding: ${typography.rhythm(1 / 3)};
             flex-grow: 1;
+            ${typography.scale(1 / 4)};
           `}
         >
           {name}
