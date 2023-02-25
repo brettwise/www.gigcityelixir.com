@@ -63,8 +63,8 @@ const ReturningAnnouncement = () => (
       Chattanooga, TN
     </p>
     <p>
-      Right now we are looking for sponsors (all levels) and speakers! If you
-      are interested in partnering with us, <br />
+      Right now we are looking for sponsors (all levels)! If you are interested
+      in partnering with us, <br />
       <br />
       <a href="mailto:info@grox.io" css={linkCss}>
         contact info@grox.io
