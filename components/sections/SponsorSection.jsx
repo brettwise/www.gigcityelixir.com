@@ -97,22 +97,21 @@ const SubscriptionSection = () => (
       <h3>Gold</h3>
       <div css={flexGrid}>
         <Platinum url="https://www.wyeworks.com/">
-          <figure>
-            <img
-              src="/static/sponsor-logos/Wyeworks-Logo-Black-Red.png"
-              alt="WyeWorks"
-              css={css`
-                padding: 5rem 2rem 2rem;
-              `}
-            />
-            <p>
-              WyeWorks is a team of expert consultants with 15+ years building
-              software people love and enabling companies to succeed, by
-              crafting high quality solutions using Elixir. We are the partner
-              you can trust, and we'll help you build the right thing right.
-              Let’s build the next big thing together!
-            </p>
-          </figure>
+          <img
+            src="/static/sponsor-logos/Wyeworks-Logo-Black-Red.png"
+            alt="WyeWorks"
+            css={css`
+              margin: ${typography.rhythm(1)} auto;
+              max-width: 50%;
+            `}
+          />
+          <p>
+            WyeWorks is a team of expert consultants with 15+ years building
+            software people love and enabling companies to succeed, by crafting
+            high quality solutions using Elixir. We are the partner you can
+            trust, and we'll help you build the right thing right. Let’s build
+            the next big thing together!
+          </p>
         </Platinum>
       </div>
     </div>
