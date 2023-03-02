@@ -66,7 +66,6 @@ I now work on distributed systems programming at HCA Healthcare,
 focused on real-time patient care with project Waterpark. POKE 53281,
 0.`,
   },
-  { name: "Sean Moriarity" },
   {
     name: "Steve Bussey",
     imgSrc: "steve-bussey.jpg",
