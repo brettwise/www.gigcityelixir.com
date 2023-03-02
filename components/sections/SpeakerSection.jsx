@@ -1,40 +1,14 @@
 import React from "react";
-import SectionWrapper from "../SectionWrapper";
 import { css } from "@emotion/core";
 import { typography } from "../../utils/typography";
-import { breakpoint } from "../../utils/breakpoints";
-import { colors } from "../../utils/constants";
-
-const speakers = [
-  { name: "Alexa Hunleth" },
-  { name: "Amos King" },
-  { name: "Andrew Ek", imgSrc: "andrew-ek.jpeg" },
-  { name: "Ben Wheat" },
-  { name: "Bruce Tate", imgSrc: "bruce.jpg" },
-  { name: "Bryan Hunter" },
-  { name: "Chris Keathley" },
-  { name: "Eric Oestrich" },
-  { name: "Frank Hunleth" },
-  { name: "Greg Mefford" },
-  { name: "Jeffrey Matthias" },
-  { name: "Joshua Plicque" },
-  { name: "Kimberly Johnson" },
-  { name: "Melvin Cedeno" },
-  { name: "Osa Gaius" },
-  { name: "Randall Thomas" },
-  { name: "Scott Southworth" },
-  { name: "Sean Moriarity" },
-  { name: "Steve Bussey" },
-  { name: "Vanessa Lee" },
-  { name: "Zach Daniel" },
-];
+import { breakpoint, points } from "../../utils/breakpoints";
+import { colors, hues } from "../../utils/constants";
+import { speakers } from "../../data/speakers";
 
 export default function SpeakerSection() {
   return (
-    <SectionWrapper
-      header="Our Speakers"
-      id="speakers"
-      extraCss={css`
+    <div
+      css={css`
         background-color: ${colors.plum};
         margin-left: 0;
         margin-right: 0;
@@ -45,6 +19,13 @@ export default function SpeakerSection() {
         }
       `}
     >
+      <header
+        css={css`
+          margin: auto;
+        `}
+      >
+        <h2 id="speakers">Our Speakers</h2>
+      </header>
       <div
         css={css`
           margin-left: -${typography.rhythm(1)};
@@ -53,22 +34,31 @@ export default function SpeakerSection() {
           margin-left: 0;
           gap: 8px;
 
-          ${breakpoint("large")} {
+          ${breakpoint("medium")} {
             grid-template-columns: 1fr 1fr;
+          }
+
+          ${breakpoint("large")} {
+            grid-template-columns: 1fr 1fr 1fr;
+          }
+
+          ${breakpoint("xLarge")} {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
           }
         `}
       >
-        {speakers.map(({ name, imgSrc }) => (
+        {speakers.map(({ description, name, imgSrc }) => (
           <Bio
             key={name}
-            // imgSrc={imgSrc}
+            description={description}
+            imgSrc={imgSrc}
             name={name}
             // href="/alexa-hunleth"
             // twitterHandle="fhunleth"
           />
         ))}
       </div>
-    </SectionWrapper>
+    </div>
   );
 }
 
@@ -79,42 +69,44 @@ function Bio({ children, href, imgSrc, name, twitterHandle, githubUser }) {
       css={css`
         border-radius: 3px;
         overflow: hidden;
-        text-align: center;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
         flex-direction: column;
         justify-content: space-between;
+        background-color: ${colors.peachy_plum};
 
         img {
           display: block;
-          margin-bottom: 0;
+          margin: 0;
+          aspect-ratio: 1;
+          object-fit: cover;
           background-color: ${colors.peachy_plum};
           position: relative;
         }
       `}
     >
-      <div
-        href={href}
-        css={css`
-          display: flex;
-          flex-direction: column;
-          flex-grow: 1;
-          font-size: 2rem;
-        `}
-      >
-        {imgSrc && <img src={`/static/speakers/${imgSrc}`} alt="" />}
+      {imgSrc ? (
+        <img src={`/static/speakers/${imgSrc}`} alt="" />
+      ) : (
         <div
           css={css`
-            background-color: ${colors.peachy_plum};
-            color: white;
-            padding: ${typography.rhythm(1 / 3)};
-            flex-grow: 1;
-            ${typography.scale(1 / 4)};
+            background-color: hsl(${hues.plum}, 80%, 20%, 20%);
+            min-height: ${typography.rhythm(4)};
           `}
-        >
-          {name}
-        </div>
+        />
+      )}
+      <div
+        css={css`
+          color: white;
+          padding: ${typography.rhythm(1 / 3)} ${typography.rhythm(1)};
+          display: flex;
+          align-items: center;
+          ${typography.scale(1 / 4)};
+        `}
+      >
+        {name}
       </div>
-      {children}
+      {/* {children}
       {twitterHandle && (
         <div
           css={css`
@@ -136,7 +128,7 @@ function Bio({ children, href, imgSrc, name, twitterHandle, githubUser }) {
         >
           <a href={`https://github.com/${githubUser}`}>{githubUser}</a>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
