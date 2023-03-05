@@ -37,7 +37,12 @@ export function BioPage({ name, children, src, subtitle }) {
           `}
         >
           <Logo />
-          <DateAndVenue />
+          <DateAndVenue
+            extraCss={css`
+              margin: 0 !important;
+              padding: 1em !important;
+            `}
+          />
         </header>
 
         <div
