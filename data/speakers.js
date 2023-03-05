@@ -1,13 +1,15 @@
 export const speakers = [
   {
+    slug: "alexa-hunleth",
     name: "Alexa Hunleth",
     imgSrc: "alexa-hunleth.jpg",
     description:
       "Alexa is a senior at Montgomery Blair High School who has a passion for both technology and music. She is an active member of ElixirChatt and a captain of the cybersecurity club at her school. Outside of programming, she also plays the flute and piccolo, often participating in local bands, musicals, and school concerts.",
   },
-  { name: "Amos King" },
-  { name: "Andrew Ek", imgSrc: "andrew-ek.jpeg" },
+  { slug: "amos-king", name: "Amos King" },
+  { slug: "andrew-ek", name: "Andrew Ek", imgSrc: "andrew-ek.jpeg" },
   {
+    slug: "ben-wheat",
     name: "Ben Wheat",
     imgSrc: "ben-wheat.jpg",
     description: `
@@ -16,16 +18,18 @@ Big failure guy. Been failing professionally for 10 years and currently doing it
 Husband and dad. Food. Like to ask people how they are actually doing.  
   `,
   },
-  { name: "Bruce Tate", imgSrc: "bruce.jpg" },
-  { name: "Bryan Hunter" },
-  { name: "Chris Keathley" },
+  { slug: "bruce-tate", name: "Bruce Tate", imgSrc: "bruce.jpg" },
+  { slug: "bryan-hunter", name: "Bryan Hunter" },
+  { slug: "chris-keathley", name: "Chris Keathley" },
   {
+    slug: "eric-oestrich",
     name: "Eric Oestrich",
     imgSrc: "eric-oestrich.jpeg",
     description:
       "Eric Oestrich is an Engineering Manager at SmartRent and works on NervesHub. He's been working on Aino for over a year now.",
   },
   {
+    slug: "frank-hunleth",
     name: "Frank Hunleth",
     imgSrc: "frank-hunleth.jpg",
     description: `Frank Hunleth is an embedded systems programmer, OSS maintainer, and
@@ -34,10 +38,11 @@ SmartRent, a company that provides smart home automation for rental
 properties. When not in front of a computer, he loves running and
 spending time with his family.`,
   },
-  { name: "Greg Mefford" },
-  { name: "Jeffrey Matthias" },
-  { name: "Joshua Plicque" },
+  { slug: "greg-mefford", name: "Greg Mefford" },
+  { slug: "jeffrey-matthias", name: "Jeffrey Matthias" },
+  { slug: "joshua-plicque", name: "Joshua Plicque" },
   {
+    slug: "kimberly-erni",
     name: "Kimberly Erni",
     imgSrc: "kimberly-erni.jpeg",
     description: `Kimberly Erni is a Backend Engineer at TravelPass Group. Upon
@@ -47,15 +52,17 @@ with TravelPass Group. Grit, tutorials, mentorship, and TravelPass
 Group have all been key to succeeding in furthering her skills and her
 career.`,
   },
-  { name: "Melvin Cedeno" },
+  { slug: "melvin-cedeno", name: "Melvin Cedeno" },
   {
+    slug: "osa-gaius",
     name: "Osa Gaius",
     description:
       "Osayame Gaius is founder and CEO of Parrot, a venture-backed startup building a better mobile checkout experience. Before Parrot, Osa served as VP of Engineering of BlackRock and led payments at MailChimp.",
     imgSrc: "osa-gaius.jpg",
   },
-  { name: "Randall Thomas" },
+  { slug: "randall-thomas", name: "Randall Thomas" },
   {
+    slug: "scott-southworth",
     name: "Scott Southworth",
     imgSrc: "scott-southworth.jpg",
     description: `Torn between art, math, and an extreme deficit of attention, I studied
@@ -67,12 +74,14 @@ focused on real-time patient care with project Waterpark. POKE 53281,
 0.`,
   },
   {
+    slug: "steve-bussey",
     name: "Steve Bussey",
     imgSrc: "steve-bussey.jpg",
     description: `Steve Bussey is a software architect turned startup founder. He is the author of "Real-Time Phoenix", which came from his work leading development on real-time Elixir applications that power critical features of business software, and he's currently writing "Elixir for Rubyists". Steve is passionate about sharing Elixir due to the positive impact it has had on how he designs and develops applications.`,
   },
-  { name: "Vanessa Lee" },
+  { slug: "vanessa-lee", name: "Vanessa Lee" },
   {
+    slug: "zach-daniel",
     name: "Zach Daniel",
     imgSrc: "zach-daniel.jpeg",
     description:

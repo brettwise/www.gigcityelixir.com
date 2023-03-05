@@ -2,7 +2,7 @@ import { BioPage } from "../components/BioPage";
 import { speakers } from "../data/speakers";
 
 export default function () {
-  const speaker = speakers.find((bio) => bio.slug === "frank-hunleth");
+  const speaker = speakers.find((bio) => bio.slug === "alexa-hunleth");
   return (
     <BioPage
       src={speaker.imgSrc}
