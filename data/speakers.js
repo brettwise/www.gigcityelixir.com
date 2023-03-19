@@ -13,13 +13,19 @@ export const speakers = [
     name: "Ben Wheat",
     imgSrc: "ben-wheat.jpg",
     description: `
-Big failure guy. Been failing professionally for 10 years and currently doing it at Kamana. 
+Big failure guy. Been failing professionally for 10 years and currently doing it at Kamana.
 
-Husband and dad. Food. Like to ask people how they are actually doing.  
+Husband and dad. Food. Like to ask people how they are actually doing.
   `,
   },
   { slug: "bruce-tate", name: "Bruce Tate", imgSrc: "bruce.jpg" },
-  { slug: "bryan-hunter", name: "Bryan Hunter" },
+  {
+    slug: "bryan-hunter",
+    name: "Bryan Hunter",
+    imgSrc: "bryan-hunter.jpg",
+    description: "Bryan Hunter is an Enterprise Fellow at HCA Healthcare. He has three decades of custom software development and consulting experience in complex business domains. In 2012 he founded Nashville Functional Programmers (@NashFP). Bryan enjoys supporting FP communities around the world and has shared his experience in Lean and functional programming at conferences and universities in Oslo, London, Manila, Bangalore, Brisbane, and throughout the United States.",
+    twitter: "@NashFP"
+  },
   { slug: "chris-keathley", name: "Chris Keathley" },
   {
     slug: "eric-oestrich",
