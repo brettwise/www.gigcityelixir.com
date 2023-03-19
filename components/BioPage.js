@@ -37,7 +37,12 @@ export function BioPage({ name, children, src, subtitle }) {
           `}
         >
           <Logo />
-          <DateAndVenue />
+          <DateAndVenue
+            extraCss={css`
+              margin: 0 !important;
+              padding: 1em !important;
+            `}
+          />
         </header>
 
         <div
@@ -71,15 +76,17 @@ export function BioPage({ name, children, src, subtitle }) {
           `}
         >
           <figure>
-            <img
-              src={"/static/speakers/" + src}
-              css={css`
-                display: block;
-                margin: 4rem auto 4rem;
-                box-shadow: -1em -1em 0 ${colors.peach},
-                  1em 1em 0 0 hsla(${hues.plum}, 80%, 20%, 0.5);
-              `}
-            />
+            {src && (
+              <img
+                src={"/static/speakers/" + src}
+                css={css`
+                  display: block;
+                  margin: 4rem auto 4rem;
+                  box-shadow: -1em -1em 0 ${colors.peach},
+                    1em 1em 0 0 hsla(${hues.plum}, 80%, 20%, 0.5);
+                `}
+              />
+            )}
             {subtitle && (
               <figcaption
                 className="ff-odudomono-l"

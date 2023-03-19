@@ -47,24 +47,18 @@ export default function SpeakerSection() {
           }
         `}
       >
-        {speakers.map(({ description, name, imgSrc }) => (
-          <Bio
-            key={name}
-            description={description}
-            imgSrc={imgSrc}
-            name={name}
-            // href="/alexa-hunleth"
-            // twitterHandle="fhunleth"
-          />
+        {speakers.map((speaker) => (
+          <Bio key={speaker.slug} {...speaker} />
         ))}
       </div>
     </div>
   );
 }
 
-function Bio({ children, href, imgSrc, name, twitterHandle, githubUser }) {
+function Bio({ children, imgSrc, name, slug, twitterHandle, githubUser }) {
   return (
-    <div
+    <a
+      href={`/${slug}`}
       className="ff-odudomono-r"
       css={css`
         border-radius: 3px;
@@ -74,6 +68,12 @@ function Bio({ children, href, imgSrc, name, twitterHandle, githubUser }) {
         flex-direction: column;
         justify-content: space-between;
         background-color: ${colors.peachy_plum};
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          filter: saturate(125%);
+        }
 
         img {
           display: block;
@@ -129,7 +129,7 @@ function Bio({ children, href, imgSrc, name, twitterHandle, githubUser }) {
           <a href={`https://github.com/${githubUser}`}>{githubUser}</a>
         </div>
       )} */}
-    </div>
+    </a>
   );
 }
 
