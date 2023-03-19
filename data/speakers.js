@@ -85,7 +85,7 @@ focused on real-time patient care with project Waterpark. POKE 53281,
     imgSrc: "steve-bussey.jpg",
     description: `Steve Bussey is a software architect turned startup founder. He is the author of "Real-Time Phoenix", which came from his work leading development on real-time Elixir applications that power critical features of business software, and he's currently writing "Elixir for Rubyists". Steve is passionate about sharing Elixir due to the positive impact it has had on how he designs and develops applications.`,
   },
-  { slug: "vanessa-lee", name: "Vanessa Lee" },
+  { slug: "vanessa-lee", name: "Vanessa Lee", imgSrc: "vanessa-lee.jpg", description: "Vanessa is a senior engineering manager with Papa Inc. She's been developing s/w for over 20 years with a focus on the Erlang Ecosystem since 2011. She leads a team of Elixir and QA Engineers to passionately architect and maintain software. In particular, she loves the treasure hunt of troubleshooting a gnarly bug. In her free time, she is a student of Forensic Genealogy and Machine Learning." },
   {
     slug: "zach-daniel",
     name: "Zach Daniel",
