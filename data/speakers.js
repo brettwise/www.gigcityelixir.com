@@ -47,9 +47,9 @@ spending time with his family.`,
   },
   { slug: "greg-mefford", name: "Greg Mefford" },
   {
-    slug: "jeffery-matthias",
+    slug: "jeffrey-matthias",
     name: "Jeffrey Matthias",
-    imgSrc: "jeffery-matthias.jpg",
+    imgSrc: "jeffrey-matthias.jpg",
     description:
       "Jeffrey is a father, a maker, and a principal software engineer at Community.com. He is also the co-author of Testing Elixir, published by PragProg.",
   },
