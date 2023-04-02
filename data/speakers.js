@@ -51,7 +51,7 @@ spending time with his family.`,
     name: "Jeffrey Matthias",
     imgSrc: "jeffery-matthias.jpg",
     description:
-      "Jeffrey is a father, a maker, and a principal software engineer at Community.com. He is also the co-author of Testing Elixir, published by PragProg. ",
+      "Jeffrey is a father, a maker, and a principal software engineer at Community.com. He is also the co-author of Testing Elixir, published by PragProg.",
   },
   { slug: "joshua-plicque", name: "Joshua Plicque" },
   {
