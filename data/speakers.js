@@ -88,7 +88,7 @@ career.`,
       "Osayame Gaius is founder and CEO of Parrot, a venture-backed startup building a better mobile checkout experience. Before Parrot, Osa served as VP of Engineering of BlackRock and led payments at MailChimp.",
     imgSrc: "osa-gaius.jpg",
   },
-  { slug: "randall-thomas", name: "Randall Thomas" },
+  { slug: "randall-thomas", name: "Randall Thomas", imgSrc: "randall-thomas.jpg" },
   {
     slug: "scott-southworth",
     name: "Scott Southworth",
