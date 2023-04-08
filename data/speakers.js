@@ -63,7 +63,12 @@ spending time with his family.`,
     description:
       "Jeffrey is a father, a maker, and a principal software engineer at Community.com. He is also the co-author of Testing Elixir, published by PragProg.",
   },
-  { slug: "joshua-plicque", name: "Joshua Plicque" },
+  {
+    slug: "joshua-plicque",
+    imgSrc: "joshua-plicque.jpg",
+    name: "Joshua Plicque",
+    description: "Phoenix LiveView and Elixir zealot. Instructor at LiveView Mastery. Semi-Pro Poker Player. Founder & CEO at Or Equals."
+   },
   {
     slug: "kimberly-erni",
     name: "Kimberly Erni",
