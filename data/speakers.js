@@ -45,7 +45,12 @@ SmartRent, a company that provides smart home automation for rental
 properties. When not in front of a computer, he loves running and
 spending time with his family.`,
   },
-  { slug: "greg-mefford", name: "Greg Mefford" },
+  {
+    slug: "greg-mefford",
+    name: "Greg Mefford",
+    imgSrc: "greg-mefford.jpg",
+    description: "Greg is a Senior Staff Backend Engineer, working on Frame.io at Adobe. He has always had a passion for metrics and observability and is a member of the Erlang Ecosystem Foundation Observability working group. He is the primary maintainer of the Spandex project and contributor to the Erlang/Elixir implementation of the official OpenTelemetry libraries and documentation. Previously, he has been heavily involved in the Nerves project and community, but has phased out as he hasn't had the opportunity to use it for work in recent years."
+  },
   {
     slug: "jeffrey-matthias",
     name: "Jeffrey Matthias",
