@@ -6,7 +6,12 @@ export const speakers = [
     description:
       "Alexa is a senior at Montgomery Blair High School who has a passion for both technology and music. She is an active member of ElixirChatt and a captain of the cybersecurity club at her school. Outside of programming, she also plays the flute and piccolo, often participating in local bands, musicals, and school concerts.",
   },
-  { slug: "amos-king", name: "Amos King" },
+  {
+    slug: "amos-king",
+    imgSrc: "amos-king.jpg",
+    name: "Amos King",
+    description: "Amos is the Founder of Binary Noggin and the host of Elixir Outlaws. He loves solving problems and learning with others. When not coding, Amos fly fishes and hikes with his family."
+  },
   { slug: "andrew-ek", name: "Andrew Ek", imgSrc: "andrew-ek.jpeg" },
   {
     slug: "ben-wheat",
