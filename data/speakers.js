@@ -6,7 +6,12 @@ export const speakers = [
     description:
       "Alexa is a senior at Montgomery Blair High School who has a passion for both technology and music. She is an active member of ElixirChatt and a captain of the cybersecurity club at her school. Outside of programming, she also plays the flute and piccolo, often participating in local bands, musicals, and school concerts.",
   },
-  { slug: "amos-king", name: "Amos King" },
+  {
+    slug: "amos-king",
+    imgSrc: "amos-king.jpg",
+    name: "Amos King",
+    description: "Amos is the Founder of Binary Noggin and the host of Elixir Outlaws. He loves solving problems and learning with others. When not coding, Amos fly fishes and hikes with his family."
+  },
   { slug: "andrew-ek", name: "Andrew Ek", imgSrc: "andrew-ek.jpeg" },
   {
     slug: "ben-wheat",
@@ -45,7 +50,12 @@ SmartRent, a company that provides smart home automation for rental
 properties. When not in front of a computer, he loves running and
 spending time with his family.`,
   },
-  { slug: "greg-mefford", name: "Greg Mefford" },
+  {
+    slug: "greg-mefford",
+    name: "Greg Mefford",
+    imgSrc: "greg-mefford.jpg",
+    description: "Greg is a Senior Staff Backend Engineer, working on Frame.io at Adobe. He has always had a passion for metrics and observability and is a member of the Erlang Ecosystem Foundation Observability working group. He is the primary maintainer of the Spandex project and contributor to the Erlang/Elixir implementation of the official OpenTelemetry libraries and documentation. Previously, he has been heavily involved in the Nerves project and community, but has phased out as he hasn't had the opportunity to use it for work in recent years."
+  },
   {
     slug: "jeffrey-matthias",
     name: "Jeffrey Matthias",
@@ -53,7 +63,12 @@ spending time with his family.`,
     description:
       "Jeffrey is a father, a maker, and a principal software engineer at Community.com. He is also the co-author of Testing Elixir, published by PragProg.",
   },
-  { slug: "joshua-plicque", name: "Joshua Plicque" },
+  {
+    slug: "joshua-plicque",
+    imgSrc: "joshua-plicque.jpg",
+    name: "Joshua Plicque",
+    description: "Phoenix LiveView and Elixir zealot. Instructor at LiveView Mastery. Semi-Pro Poker Player. Founder & CEO at Or Equals."
+   },
   {
     slug: "kimberly-erni",
     name: "Kimberly Erni",
@@ -73,7 +88,7 @@ career.`,
       "Osayame Gaius is founder and CEO of Parrot, a venture-backed startup building a better mobile checkout experience. Before Parrot, Osa served as VP of Engineering of BlackRock and led payments at MailChimp.",
     imgSrc: "osa-gaius.jpg",
   },
-  { slug: "randall-thomas", name: "Randall Thomas" },
+  { slug: "randall-thomas", name: "Randall Thomas", imgSrc: "randall-thomas.jpg" },
   {
     slug: "scott-southworth",
     name: "Scott Southworth",

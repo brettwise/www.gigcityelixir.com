@@ -116,6 +116,14 @@ const SubscriptionSection = () => (
       </div>
     </div>
 
+    <div className={platinumSponsors}>
+      <h3>Scholarship donors</h3>
+      <Donors>
+        <Donor>Doyle Turner</Donor>
+        <Donor>Matt Enlow</Donor>
+      </Donors>
+    </div>
+
     <Link href="/contact">
       <a href="/contact" css={buttonCss}>
         Contact Us About Sponsoring
@@ -125,6 +133,30 @@ const SubscriptionSection = () => (
 );
 
 export default SubscriptionSection;
+
+function Donors({children}) {
+  return (
+    <ul css={css`
+        list-style: none;
+      margin-left: 0;
+      ${breakpoint("large")} {
+        display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+      }
+      `}>{children}</ul>
+  )
+}
+
+function Donor({children}) {
+  return (
+    <li css={css`
+        background: ${colors.blush};
+        padding: 8px 4px;
+      text-align: center;
+      `}>{children}</li>
+  )
+}
 
 function Platinum({ url, children, customCss }) {
   return (

@@ -1,4 +1,4 @@
-import { BioPage } from "../components/BioPage";
+import { BioPage, ExternalLink } from "../components/BioPage";
 import { speakers } from "../data/speakers";
 
 export default function () {
@@ -10,6 +10,8 @@ export default function () {
       subtitle={speaker.subtitle}
     >
       <p>{speaker.description}</p>
+      <ExternalLink href="https://www.youtube.com/@liveviewmastery">LiveView Mastery</ExternalLink>
+      <ExternalLink href="https://orequals.com/">Or Equals</ExternalLink>
     </BioPage>
   );
 }
