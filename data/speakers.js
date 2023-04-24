@@ -126,6 +126,13 @@ focused on real-time patient care with project Waterpark. POKE 53281,
 0.`,
   },
   {
+    slug: "sigu-magwa",
+    name: "Sigu Magwa",
+    description:
+      `Sigu Magwa is born and bred in Kenya besides a beautiful fresh water lake and  has over 7 years experience in software development and a passion for teaching technical skills. I have worked remotely as a trainer and a software developer for the past couple of years. I would really love to drive an 18 wheeler across the continent.`,
+    imgSrc: "sigu-magwa.jpg",
+  },
+  {
     slug: "steve-bussey",
     name: "Steve Bussey",
     imgSrc: "steve-bussey.jpg",
