@@ -12,7 +12,18 @@ export const speakers = [
     name: "Amos King",
     description: "Amos is the Founder of Binary Noggin and the host of Elixir Outlaws. He loves solving problems and learning with others. When not coding, Amos fly fishes and hikes with his family."
   },
-  { slug: "andrew-ek", name: "Andrew Ek", imgSrc: "andrew-ek.jpeg" },
+  {
+    slug: "andrew-ek",
+    name: "Andrew Ek",
+    imgSrc: "andrew-ek.jpeg",
+    description: `Andrew Ek is a principal engineer with Launch Scout, where he builds
+software for clients using Elixir, Ruby, and Javascript, and where he
+trains software development apprentices. He lives in Lincoln,
+Nebraska, with his spouse, their daughter, and two orange cats. You
+can find his thoughts about programming and tennis on twitter at
+@ektastrophe`,
+    twitter: "@ektastrophe"
+  },
   {
     slug: "ben-wheat",
     name: "Ben Wheat",
