@@ -96,6 +96,14 @@ with TravelPass Group. Grit, tutorials, mentorship, and TravelPass
 Group have all been key to succeeding in furthering her skills and her
 career.`,
   },
+  {
+    slug: "matt-enlow",
+    name: "Matt Enlow",
+    description:
+      `Matt's been working with Elixir in production for nearly ten years. He currently works at Adobe on frame.io, where he's an advocate for building great teams and maximizing developer productivity through a maintainable codebase.
+Previously Matt spent many years living and working out of a van to maximize his time spent rock climbing. He now lives full-time in Lander, WY, where the rocks are never more than a ten minutes' drive away.`,
+    imgSrc: "matt-enlow.jpg",
+  },
   { slug: "melvin-cedeno", name: "Melvin Cedeno" },
   {
     slug: "osa-gaius",
