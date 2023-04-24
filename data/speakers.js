@@ -32,7 +32,12 @@ Husband and dad. Food. Like to ask people how they are actually doing.
       "Bryan Hunter is an Enterprise Fellow at HCA Healthcare. He has three decades of custom software development and consulting experience in complex business domains. In 2012 he founded Nashville Functional Programmers (@NashFP). Bryan enjoys supporting FP communities around the world and has shared his experience in Lean and functional programming at conferences and universities in Oslo, London, Manila, Bangalore, Brisbane, and throughout the United States.",
     twitter: "@NashFP",
   },
-  { slug: "chris-keathley", name: "Chris Keathley" },
+  {
+    slug: "chris-keathley",
+    name: "Chris Keathley",
+    imgSrc: "chris-keathley.jpg",
+    description: "Chris is a principal software engineer using Elixir and Rust to create renewable energy. When not writing code for work, Chris can be found writing code for fun, talking about the joys of functional programming, playing dungeons and dragons, roasting coffee, or building lego with his kids.",
+  },
   {
     slug: "eric-oestrich",
     name: "Eric Oestrich",
