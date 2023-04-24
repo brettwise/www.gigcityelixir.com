@@ -12,7 +12,18 @@ export const speakers = [
     name: "Amos King",
     description: "Amos is the Founder of Binary Noggin and the host of Elixir Outlaws. He loves solving problems and learning with others. When not coding, Amos fly fishes and hikes with his family."
   },
-  { slug: "andrew-ek", name: "Andrew Ek", imgSrc: "andrew-ek.jpeg" },
+  {
+    slug: "andrew-ek",
+    name: "Andrew Ek",
+    imgSrc: "andrew-ek.jpeg",
+    description: `Andrew Ek is a principal engineer with Launch Scout, where he builds
+software for clients using Elixir, Ruby, and Javascript, and where he
+trains software development apprentices. He lives in Lincoln,
+Nebraska, with his spouse, their daughter, and two orange cats. You
+can find his thoughts about programming and tennis on twitter at
+@ektastrophe`,
+    twitter: "@ektastrophe"
+  },
   {
     slug: "ben-wheat",
     name: "Ben Wheat",
@@ -32,7 +43,12 @@ Husband and dad. Food. Like to ask people how they are actually doing.
       "Bryan Hunter is an Enterprise Fellow at HCA Healthcare. He has three decades of custom software development and consulting experience in complex business domains. In 2012 he founded Nashville Functional Programmers (@NashFP). Bryan enjoys supporting FP communities around the world and has shared his experience in Lean and functional programming at conferences and universities in Oslo, London, Manila, Bangalore, Brisbane, and throughout the United States.",
     twitter: "@NashFP",
   },
-  { slug: "chris-keathley", name: "Chris Keathley" },
+  {
+    slug: "chris-keathley",
+    name: "Chris Keathley",
+    imgSrc: "chris-keathley.jpg",
+    description: "Chris is a principal software engineer using Elixir and Rust to create renewable energy. When not writing code for work, Chris can be found writing code for fun, talking about the joys of functional programming, playing dungeons and dragons, roasting coffee, or building lego with his kids.",
+  },
   {
     slug: "eric-oestrich",
     name: "Eric Oestrich",
@@ -80,6 +96,14 @@ with TravelPass Group. Grit, tutorials, mentorship, and TravelPass
 Group have all been key to succeeding in furthering her skills and her
 career.`,
   },
+  {
+    slug: "matt-enlow",
+    name: "Matt Enlow",
+    description:
+      `Matt's been working with Elixir in production for nearly ten years. He currently works at Adobe on frame.io, where he's an advocate for building great teams and maximizing developer productivity through a maintainable codebase.
+Previously Matt spent many years living and working out of a van to maximize his time spent rock climbing. He now lives full-time in Lander, WY, where the rocks are never more than a ten minutes' drive away.`,
+    imgSrc: "matt-enlow.jpg",
+  },
   { slug: "melvin-cedeno", name: "Melvin Cedeno" },
   {
     slug: "osa-gaius",
@@ -100,6 +124,13 @@ bouncing between game development and industrial systems integration,
 I now work on distributed systems programming at HCA Healthcare,
 focused on real-time patient care with project Waterpark. POKE 53281,
 0.`,
+  },
+  {
+    slug: "sigu-magwa",
+    name: "Sigu Magwa",
+    description:
+      `Sigu Magwa is born and bred in Kenya besides a beautiful fresh water lake and  has over 7 years experience in software development and a passion for teaching technical skills. I have worked remotely as a trainer and a software developer for the past couple of years. I would really love to drive an 18 wheeler across the continent.`,
+    imgSrc: "sigu-magwa.jpg",
   },
   {
     slug: "steve-bussey",
