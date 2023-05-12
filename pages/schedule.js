@@ -1,6 +1,35 @@
 import React from "react";
 import Page from "../components/Page";
 import { css } from "@emotion/core";
+import Link from "next/link";
+
+const Event = ({ time, speaker, speakers, title, url }) => {
+  const hasSpeaker = !!speaker || !!speakers;
+  const needsSeparator = hasSpeaker && !!title;
+  return (
+    <tr>
+      <th>{time}</th>
+      <td>
+        {speaker && (
+          <strong>{url ? <Link href={url}>{speaker}</Link> : speaker}</strong>
+        )}
+        {speakers &&
+          speakers
+            .map((speaker) => (
+              <strong>
+                <Link href={speaker.url}>{speaker.speaker}</Link>
+              </strong>
+            ))
+            .reduce((jsx, speaker) => (
+              <>
+                {jsx} and {speaker}
+              </>
+            ))}
+        {needsSeparator && ":"} {title && <span>{title}</span>}
+      </td>
+    </tr>
+  );
+};
 
 export default function Schedule() {
   return (
@@ -13,9 +42,10 @@ export default function Schedule() {
             vertical-align: top;
           }
           th {
-            white-space: nowrap;
+            white-space: pre;
             font-weight: normal;
             color: rgba(0, 0, 0, 0.5);
+            font-family: "OdudoMono-Regular", monospace;
           }
           thead th {
             color: #772858;
@@ -25,108 +55,39 @@ export default function Schedule() {
             text-align: center;
             padding-top: 1em;
           }
+          thead th a {
+            opacity: 0;
+            position: absolute;
+          }
+          thead th:hover a {
+            opacity: 1;
+          }
+          thead th a:focus {
+            opacity: 1;
+          }
         `}
       >
         <thead>
           <tr>
-            <th colspan="2">Friday, October 18th</th>
+            <th colspan="2">
+              <a href="#day-1" id="day-1">
+                #
+              </a>{" "}
+              Friday, May 19th
+            </th>
           </tr>
         </thead>
         <tbody>
+          {day1.map((event, index) => (
+            <Event {...event} key={index} />
+          ))}
           <tr>
-            <th>08:00</th> <td>Breakfast and Registration</td>
-          </tr>
-          <tr>
-            <th>08:45 - 09:00</th> <td>Announcements</td>
-          </tr>
-          <tr>
-            <th>09:00 - 09:45</th>
+            <th>{" 6:00 -  9:00"}</th>
             <td>
-              <strong>Justin Schneck:</strong> Adopting Nerves for IoT
-            </td>
-          </tr>
-          <tr>
-            <th>09:50 - 10:20</th>
-            <td>
-              <strong>Ben Marx:</strong> Modeling Systems with TLA+
-            </td>
-          </tr>
-          <tr>
-            <th>10:20 - 10:50</th> <td>Break</td>
-          </tr>
-          <tr>
-            <th>10:50 - 11:20</th>
-            <td>
-              <strong>Amos King:</strong> Thinking > Typing
-            </td>
-          </tr>
-          <tr>
-            <th>11:25 - 12:15</th>
-            <td>
-              <strong>Miki Rezentes:</strong> It's APIs All the Way Down
-            </td>
-          </tr>
-          <tr>
-            <th>12:15 - 01:30</th> <td>Lunch</td>
-          </tr>
-          <tr>
-            <th>01:30 - 01:35</th>
-            <td>Platinum Sponsor Talk - Very</td>
-          </tr>
-          <tr>
-            <th>01:40 - 02:10</th>
-            <td>
-              <strong>Martin Gausby</strong>
-            </td>
-          </tr>
-          <tr>
-            <th>02:15 - 2:45</th>
-            <td>
-              <strong>Jeff Grunewald:</strong> A Truly Smart City Runs on the
-              BEAM
-            </td>
-          </tr>
-          <tr>
-            <th>02:45 - 02:50</th>
-            <td>Platinum Sponsor Talk - Pillar</td>
-          </tr>
-          <tr>
-            <th>02:55 - 03:45</th>
-            <td>
-              <strong>Better Allies - Approaching Equality Together</strong>
-            </td>
-          </tr>
-          <tr>
-            <th>03:45 - 04:10</th>
-            <td>Break</td>
-          </tr>
-          <tr>
-            <th>04:10 - 04:40</th>
-            <td>
-              <strong>Anna Neyzburg</strong>
-            </td>
-          </tr>
-          <tr>
-            <th>04:45 - 05:30</th>
-            <td>
-              <strong>Dave Thomas</strong>
-            </td>
-          </tr>
-          <tr>
-            <th>06:00 - 09:00</th>
-            <td>
-              <a href="https://www.google.com/maps/place/The+Camp+House/@35.0454122,-85.3069926,17z/data=!3m1!4b1!4m5!3m4!1s0x88605e7b6e88402b:0x1ca6cbe286c4aaed!8m2!3d35.0454122!4d-85.3069926">
-                Dinner - The Camp House
+              <a href="https://www.google.com/maps/place/Moxy+Chattanooga+Downtown/@35.0399322,-85.3071289,17z/data=!4m20!1m10!3m9!1s0x88605fe8761cce13:0xca45ed9b3732da0b!2sMoxy+Chattanooga+Downtown!5m2!4m1!1i2!8m2!3d35.0399322!4d-85.3071289!16s%2Fg%2F11f5488nmn!3m8!1s0x88605fe8761cce13:0xca45ed9b3732da0b!5m2!4m1!1i2!8m2!3d35.0399322!4d-85.3071289!16s%2Fg%2F11f5488nmn">
+                Dinner - The Moxy
                 <br />
-                149 E M L King Blvd., Chattanooga, TN 37402
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <th>09:00</th>
-            <td>
-              <a href="https://www.google.com/maps/place/Moxy+Chattanooga+Downtown/@35.040047,-85.306636,17z/data=!3m1!4b1!4m8!3m7!1s0x88605fe8761cce13:0xca45ed9b3732da0b!5m2!4m1!1i2!8m2!3d35.040047!4d-85.306636">
-                Day One After Party - The Moxy Bar
+                1220 King St Chattanooga, TN 37403
               </a>
             </td>
           </tr>
@@ -136,96 +97,167 @@ export default function Schedule() {
             <th
               colspan="2"
               style={{
-                paddingTop: "3rem"
+                paddingTop: "3rem",
               }}
             >
-              Saturday, October 19th
+              <a href="#day-2" id="day-2">
+                #
+              </a>{" "}
+              Saturday, May 20th
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th>08:00</th> <td>Breakfast and Registration</td>
-          </tr>
-          <tr>
-            <th>08:45 - 09:00</th> <td>Announcements</td>
-          </tr>
-          <tr>
-            <th>09:00 - 09:45</th>
-            <td>
-              <strong>Stuart Halloway:</strong> Sherlock Holmes, Consulting
-              Developer
-            </td>
-          </tr>
-          <tr>
-            <th>09:50 - 10:20</th>
-            <td>
-              <strong>Todd Resudek:</strong> Why you should use Nerves for your
-              next (or first) hardware project
-            </td>
-          </tr>
-          <tr>
-            <th>10:20 - 10:50</th> <td>Break</td>
-          </tr>
-          <tr>
-            <th>10:50 - 11:20</th>
-            <td>
-              <strong>Brian Troutwine:</strong> Do Big Things Well: Project
-              Gemini on the Way to the Moon
-            </td>
-          </tr>
-          <tr>
-            <th>11:25 - 12:15</th>
-            <td>
-              <strong>Camera Shy - Elixir Chatt Mentors</strong>
-            </td>
-          </tr>
-          <tr>
-            <th>12:15 - 01:30</th> <td>Lunch</td>
-          </tr>
-          <tr>
-            <th>01:30 - 01:35</th>
-            <td>Platinum Sponsor Talk - Bridge Connector</td>
-          </tr>
-          <tr>
-            <th>01:40 - 02:10</th>
-            <td>
-              <strong>Ricardo Echavarría:</strong> Assembling Lumen
-            </td>
-          </tr>
-          <tr>
-            <th>02:15 - 2:45</th>
-            <td>
-              <strong>Osayame Gaius-Obaseki</strong> Beyond Functional
-              Programming
-            </td>
-          </tr>
-          <tr>
-            <th>02:45 - 02:50</th>
-            <td>Thanking All Sponsors</td>
-          </tr>
-          <tr>
-            <th>02:55 - 03:45</th>
-            <td>
-              <strong>Elixir Outlaws Live Recording</strong>
-            </td>
-          </tr>
-          <tr>
-            <th>03:45 - 04:10</th>
-            <td>Break</td>
-          </tr>
-          <tr>
-            <th>04:10 - 05:00</th>
-            <td>
-              <strong>Chris Keathley</strong>
-            </td>
-          </tr>
-          <tr>
-            <th>05:00 - 05:15</th>
-            <td>Good Byes, Slideshow</td>
-          </tr>
+          {day2.map((event, index) => (
+            <Event {...event} key={index} />
+          ))}
         </tbody>
       </table>
     </Page>
   );
 }
+
+const day1 = [
+  {
+    time: " 8:00 -  8:45",
+    title: "Breakfast and Registration",
+  },
+  {
+    time: " 8:45 -  9:00",
+    title: "Announcements",
+  },
+  {
+    time: " 9:00 -  9:45",
+    duration: 45,
+    speaker: "Randall Thomas",
+    url: "/randall-thomas",
+  },
+  {
+    time: " 9:50 - 10:20",
+    speaker: "Amos King",
+    title:
+      "The Importance of Shepherding - Understanding Your Project in the Wild",
+    url: "/amos-king",
+  },
+  { time: "10:20 - 10:50", title: "Break" },
+  {
+    time: "10:50 - 11:20",
+    speaker: "Ben Wheat",
+    title: "Failure is the Only Option",
+    url: "/ben-wheat",
+  },
+  {
+    time: "11:20 - 11:30",
+    title: "Platinum Sponsor Talk - Launch Scout",
+  },
+  {
+    time: "11:30 - 12:00",
+    speaker: "Andrew Ek",
+    title: "Better Forms with LiveView",
+    url: "/andrew-ek",
+  },
+  {
+    time: "12:00 - 12:30",
+    speaker: "Stephen Bussey",
+    title: "Make Elixir Libraries Work for You: Innovate Through Risk",
+    // url: "/stephen-bussey",
+  },
+  {
+    time: "12:30 -  1:40",
+    title: "Lunch",
+  },
+  {
+    time: " 1:40 -  2:10 ",
+    speaker: "Frank Hunleth",
+    title: "Nerves Update",
+    url: "/frank-hunleth",
+  },
+  {
+    time: " 2:15 -  2:45",
+    speaker: "Kimberly Erni",
+    title: "From Self-Taught to First Job",
+    url: "/kimberly-erni",
+  },
+  { time: " 2:45 -  2:50", title: "Platinum Sponsor talk - Groxio" },
+  {
+    time: " 2:50 -  3:35",
+    speaker: "Elixir Chatt Panel -  Frank, Alexa, Bruce",
+    title: "A Great Loop PCB Adventure",
+  },
+  { time: " 3:35 -  4:00", title: "Break" },
+  { time: " 4:00 -  4:30", speaker: "Chris Keathley", url: "/chris-keathley" },
+  {
+    time: " 4:30 -  5:00",
+    speaker: "Zach Daniel",
+    title: "Domain Modeling, Elevated",
+    url: "/zach-daniel",
+  },
+];
+
+const day2 = [
+  {
+    time: " 8:00 -  8:45",
+    title: "Breakfast",
+  },
+  {
+    time: " 8:45 -  9:00",
+    title: "Announcements",
+  },
+  {
+    time: " 9:00 -  9:45",
+    duration: 45,
+    speaker: "Bryan Hunter",
+    url: "/bryan-hunter",
+  },
+  {
+    time: " 9:50 - 10:20",
+    speaker: "Joshua Plicque",
+    url: "/joshua-plicque",
+  },
+  { time: "10:20 - 10:50", title: "Break" },
+  {
+    time: "10:50 - 11:20",
+    speaker: "Eric Oestrich",
+    title: "I know you know Phoenix, but do you know Aino?",
+    url: "/eric-oestrich",
+  },
+  {
+    time: "11:20 - 11:30",
+    title: "Platinum Sponsor Talk - Adobe",
+  },
+  {
+    time: "11:30 - 12:00",
+    speakers: [
+      { speaker: "Greg Mefford", url: "/greg-mefford" },
+      { speaker: "Matt Enlow", url: "/matt-enlow" },
+    ],
+    title: "Styler: An Elixir Style-Guide Enforcer",
+  },
+  {
+    time: "12:00 - 12:30",
+    speaker: "Sigu Magwa",
+    title: "Observability in Elixir Applications",
+    url: "/sigu-magwa",
+  },
+  {
+    time: "12:30 -  1:40",
+    title: "Lunch",
+  },
+  {
+    time: " 1:40 -  2:10 ",
+    title: "Lightning Talks",
+  },
+  {
+    time: " 2:15 -  2:45",
+    speaker: "Jeffrey Matthias",
+    url: "/jeffrey-matthias",
+  },
+  { time: " 2:45 -  3:00", title: "Break" },
+  {
+    time: " 3:00 -  3:30",
+    speaker: "Scott Southworth",
+    url: "/scott-southworth",
+  },
+  { time: " 3:45 -  4:30", speaker: "Bruce Tate", url: "/bruce-tate" },
+  { time: "         4:30", title: "Wrap!" },
+];
