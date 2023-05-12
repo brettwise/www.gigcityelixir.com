@@ -164,9 +164,9 @@ const day1 = [
   },
   {
     time: "12:00 - 12:30",
-    speaker: "Stephen Bussey",
+    speaker: "Steve Bussey",
     title: "Make Elixir Libraries Work for You: Innovate Through Risk",
-    // url: "/stephen-bussey",
+    url: "/steve-bussey",
   },
   {
     time: "12:30 -  1:40",
