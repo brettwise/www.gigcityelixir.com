@@ -10,7 +10,8 @@ export const speakers = [
     slug: "amos-king",
     imgSrc: "amos-king.jpg",
     name: "Amos King",
-    description: "Amos is the Founder of Binary Noggin and the host of Elixir Outlaws. He loves solving problems and learning with others. When not coding, Amos fly fishes and hikes with his family."
+    description:
+      "Amos is the Founder of Binary Noggin and the host of Elixir Outlaws. He loves solving problems and learning with others. When not coding, Amos fly fishes and hikes with his family.",
   },
   {
     slug: "andrew-ek",
@@ -22,7 +23,7 @@ trains software development apprentices. He lives in Lincoln,
 Nebraska, with his spouse, their daughter, and two orange cats. You
 can find his thoughts about programming and tennis on twitter at
 @ektastrophe`,
-    twitter: "@ektastrophe"
+    twitter: "@ektastrophe",
   },
   {
     slug: "ben-wheat",
@@ -47,7 +48,8 @@ Husband and dad. Food. Like to ask people how they are actually doing.
     slug: "chris-keathley",
     name: "Chris Keathley",
     imgSrc: "chris-keathley.jpg",
-    description: "Chris is a principal software engineer using Elixir and Rust to create renewable energy. When not writing code for work, Chris can be found writing code for fun, talking about the joys of functional programming, playing dungeons and dragons, roasting coffee, or building lego with his kids.",
+    description:
+      "Chris is a principal software engineer using Elixir and Rust to create renewable energy. When not writing code for work, Chris can be found writing code for fun, talking about the joys of functional programming, playing dungeons and dragons, roasting coffee, or building lego with his kids.",
   },
   {
     slug: "eric-oestrich",
@@ -70,7 +72,8 @@ spending time with his family.`,
     slug: "greg-mefford",
     name: "Greg Mefford",
     imgSrc: "greg-mefford.jpg",
-    description: "Greg is a Senior Staff Backend Engineer, working on Frame.io at Adobe. He has always had a passion for metrics and observability and is a member of the Erlang Ecosystem Foundation Observability working group. He is the primary maintainer of the Spandex project and contributor to the Erlang/Elixir implementation of the official OpenTelemetry libraries and documentation. Previously, he has been heavily involved in the Nerves project and community, but has phased out as he hasn't had the opportunity to use it for work in recent years."
+    description:
+      "Greg is a Senior Staff Backend Engineer, working on Frame.io at Adobe. He has always had a passion for metrics and observability and is a member of the Erlang Ecosystem Foundation Observability working group. He is the primary maintainer of the Spandex project and contributor to the Erlang/Elixir implementation of the official OpenTelemetry libraries and documentation. Previously, he has been heavily involved in the Nerves project and community, but has phased out as he hasn't had the opportunity to use it for work in recent years.",
   },
   {
     slug: "jeffrey-matthias",
@@ -83,8 +86,9 @@ spending time with his family.`,
     slug: "joshua-plicque",
     imgSrc: "joshua-plicque.jpg",
     name: "Joshua Plicque",
-    description: "Phoenix LiveView and Elixir zealot. Instructor at LiveView Mastery. Semi-Pro Poker Player. Founder & CEO at Or Equals."
-   },
+    description:
+      "Phoenix LiveView and Elixir zealot. Instructor at LiveView Mastery. Semi-Pro Poker Player. Founder & CEO at Or Equals.",
+  },
   {
     slug: "kimberly-erni",
     name: "Kimberly Erni",
@@ -99,12 +103,11 @@ career.`,
   {
     slug: "matt-enlow",
     name: "Matt Enlow",
-    description:
-      `Matt's been working with Elixir in production for nearly ten years. He currently works at Adobe on frame.io, where he's an advocate for building great teams and maximizing developer productivity through a maintainable codebase.
+    description: `Matt's been working with Elixir in production for nearly ten years. He currently works at Adobe on frame.io, where he's an advocate for building great teams and maximizing developer productivity through a maintainable codebase.
 Previously Matt spent many years living and working out of a van to maximize his time spent rock climbing. He now lives full-time in Lander, WY, where the rocks are never more than a ten minutes' drive away.`,
     imgSrc: "matt-enlow.jpg",
   },
-  { slug: "melvin-cedeno", name: "Melvin Cedeno" },
+  { slug: "melvin-cedeno", name: "Melvin Cedeno", imgSrc: "melvin-cedeno.jpg" },
   {
     slug: "osa-gaius",
     name: "Osa Gaius",
@@ -112,7 +115,11 @@ Previously Matt spent many years living and working out of a van to maximize his
       "Osayame Gaius is founder and CEO of Parrot, a venture-backed startup building a better mobile checkout experience. Before Parrot, Osa served as VP of Engineering of BlackRock and led payments at MailChimp.",
     imgSrc: "osa-gaius.jpg",
   },
-  { slug: "randall-thomas", name: "Randall Thomas", imgSrc: "randall-thomas.jpg" },
+  {
+    slug: "randall-thomas",
+    name: "Randall Thomas",
+    imgSrc: "randall-thomas.jpg",
+  },
   {
     slug: "scott-southworth",
     name: "Scott Southworth",
@@ -128,8 +135,7 @@ focused on real-time patient care with project Waterpark. POKE 53281,
   {
     slug: "sigu-magwa",
     name: "Sigu Magwa",
-    description:
-      `Sigu Magwa is born and bred in Kenya besides a beautiful fresh water lake and  has over 7 years experience in software development and a passion for teaching technical skills. I have worked remotely as a trainer and a software developer for the past couple of years. I would really love to drive an 18 wheeler across the continent.`,
+    description: `Sigu Magwa is born and bred in Kenya besides a beautiful fresh water lake and  has over 7 years experience in software development and a passion for teaching technical skills. I have worked remotely as a trainer and a software developer for the past couple of years. I would really love to drive an 18 wheeler across the continent.`,
     imgSrc: "sigu-magwa.jpg",
   },
   {

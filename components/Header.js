@@ -26,7 +26,12 @@ export default function Header() {
         `}
       >
         <Logo />
-        <DateAndVenue />
+        <DateAndVenue
+          extraCss={css`
+            margin: 0 !important;
+            padding: 1em !important;
+          `}
+        />
       </Column>
     </header>
   );
