@@ -13,6 +13,7 @@ import { SkipToNavLink } from "../components/SkipToNav";
 import { breakpoint } from "../utils/breakpoints";
 import { colors } from "../utils/constants";
 import { typography } from "../utils/typography";
+import ScheduleSection from "../components/sections/ScheduleSection";
 
 export default function Index() {
   return (
@@ -56,6 +57,8 @@ export default function Index() {
           </div>
         </Hero>
         <SpeakerSection />
+        <Hr />
+        <ScheduleSection />
         <Hr />
         <SponsorSection />
         <Hr />

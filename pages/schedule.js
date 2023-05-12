@@ -31,88 +31,94 @@ const Event = ({ time, speaker, speakers, title, url }) => {
   );
 };
 
-export default function Schedule() {
+export function Schedule() {
+  return (
+    <table
+      css={css`
+        th,
+        td {
+          vertical-align: top;
+        }
+        th {
+          white-space: pre;
+          font-weight: normal;
+          color: rgba(0, 0, 0, 0.5);
+          font-family: "OdudoMono-Regular", monospace;
+        }
+        thead th {
+          color: #772858;
+          font-size: 20px;
+          font-family: "OdudoMono-Regular", sans-serif;
+          border-bottom: 1px solid currentColor;
+          text-align: center;
+          padding-top: 1em;
+        }
+        thead th a {
+          opacity: 0;
+          position: absolute;
+        }
+        thead th:hover a {
+          opacity: 1;
+        }
+        thead th a:focus {
+          opacity: 1;
+        }
+      `}
+    >
+      <thead>
+        <tr>
+          <th colspan="2">
+            <a href="#day-1" id="day-1">
+              #
+            </a>{" "}
+            Friday, May 19th
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {day1.map((event, index) => (
+          <Event {...event} key={index} />
+        ))}
+        <tr>
+          <th>{" 6:00 -  9:00"}</th>
+          <td>
+            <a href="https://www.google.com/maps/place/Moxy+Chattanooga+Downtown/@35.0399322,-85.3071289,17z/data=!4m20!1m10!3m9!1s0x88605fe8761cce13:0xca45ed9b3732da0b!2sMoxy+Chattanooga+Downtown!5m2!4m1!1i2!8m2!3d35.0399322!4d-85.3071289!16s%2Fg%2F11f5488nmn!3m8!1s0x88605fe8761cce13:0xca45ed9b3732da0b!5m2!4m1!1i2!8m2!3d35.0399322!4d-85.3071289!16s%2Fg%2F11f5488nmn">
+              Dinner - The Moxy
+              <br />
+              1220 King St Chattanooga, TN 37403
+            </a>
+          </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr>
+          <th
+            colspan="2"
+            style={{
+              paddingTop: "3rem",
+            }}
+          >
+            <a href="#day-2" id="day-2">
+              #
+            </a>{" "}
+            Saturday, May 20th
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {day2.map((event, index) => (
+          <Event {...event} key={index} />
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+export default function SchedulePage() {
   return (
     <Page title="Schedule">
       <h1>Schedule</h1>
-      <table
-        css={css`
-          th,
-          td {
-            vertical-align: top;
-          }
-          th {
-            white-space: pre;
-            font-weight: normal;
-            color: rgba(0, 0, 0, 0.5);
-            font-family: "OdudoMono-Regular", monospace;
-          }
-          thead th {
-            color: #772858;
-            font-size: 20px;
-            font-family: "OdudoMono-Regular", sans-serif;
-            border-bottom: 1px solid currentColor;
-            text-align: center;
-            padding-top: 1em;
-          }
-          thead th a {
-            opacity: 0;
-            position: absolute;
-          }
-          thead th:hover a {
-            opacity: 1;
-          }
-          thead th a:focus {
-            opacity: 1;
-          }
-        `}
-      >
-        <thead>
-          <tr>
-            <th colspan="2">
-              <a href="#day-1" id="day-1">
-                #
-              </a>{" "}
-              Friday, May 19th
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {day1.map((event, index) => (
-            <Event {...event} key={index} />
-          ))}
-          <tr>
-            <th>{" 6:00 -  9:00"}</th>
-            <td>
-              <a href="https://www.google.com/maps/place/Moxy+Chattanooga+Downtown/@35.0399322,-85.3071289,17z/data=!4m20!1m10!3m9!1s0x88605fe8761cce13:0xca45ed9b3732da0b!2sMoxy+Chattanooga+Downtown!5m2!4m1!1i2!8m2!3d35.0399322!4d-85.3071289!16s%2Fg%2F11f5488nmn!3m8!1s0x88605fe8761cce13:0xca45ed9b3732da0b!5m2!4m1!1i2!8m2!3d35.0399322!4d-85.3071289!16s%2Fg%2F11f5488nmn">
-                Dinner - The Moxy
-                <br />
-                1220 King St Chattanooga, TN 37403
-              </a>
-            </td>
-          </tr>
-        </tbody>
-        <thead>
-          <tr>
-            <th
-              colspan="2"
-              style={{
-                paddingTop: "3rem",
-              }}
-            >
-              <a href="#day-2" id="day-2">
-                #
-              </a>{" "}
-              Saturday, May 20th
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {day2.map((event, index) => (
-            <Event {...event} key={index} />
-          ))}
-        </tbody>
-      </table>
+      <Schedule />
     </Page>
   );
 }
