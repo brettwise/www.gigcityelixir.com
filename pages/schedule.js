@@ -218,6 +218,7 @@ const day2 = [
   {
     time: " 9:50 - 10:20",
     speaker: "Joshua Plicque",
+    title: "Geoencoding in Elixir",
     url: "/joshua-plicque",
   },
   { time: "10:20 - 10:50", title: "Break" },
