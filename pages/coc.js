@@ -147,7 +147,7 @@ export default function Coc() {
           <ul>
             <li>
               Calling or texting this phone number:{" "}
-              <a href="tel:423-406-4088">423-406-4088</a>. This phone number
+              <a href="tel:512-350-7120">512-350-7120</a>. This phone number
               will be continuously monitored for the duration of the event.
             </li>
             <li>
@@ -182,7 +182,7 @@ export default function Coc() {
           </a>
         </dd>
         <dd>
-          Organizers' phone: <a href="tel:423-406-4088">423-406-4088</a>
+          Organizers' phone: <a href="tel:512-350-7120">512-350-7120</a>
         </dd>
         <dd>
           Police Dept: <a href="tel:423-698-2525">423-698-2525</a>
