@@ -156,6 +156,7 @@ const day1 = [
     time: "11:20 - 11:30",
     title: "Platinum Sponsor Talk - Launch Scout",
   },
+  { time: "11-30 - 11:40", title: "D̴o̸n̵g̵l̴e̵ ̶p̵u̸r̶g̶a̵t̷o̵r̸y̷" },
   {
     time: "11:40 - 12:10",
     speaker: "Steve Bussey",
