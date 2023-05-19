@@ -80,7 +80,7 @@ export function Schedule() {
           <Event {...event} key={index} />
         ))}
         <tr>
-          <th>{" 6:00 -  9:00"}</th>
+          <th>{" 5:30 -  7:30"}</th>
           <td>
             <a href="https://www.google.com/maps/place/Moxy+Chattanooga+Downtown/@35.0399322,-85.3071289,17z/data=!4m20!1m10!3m9!1s0x88605fe8761cce13:0xca45ed9b3732da0b!2sMoxy+Chattanooga+Downtown!5m2!4m1!1i2!8m2!3d35.0399322!4d-85.3071289!16s%2Fg%2F11f5488nmn!3m8!1s0x88605fe8761cce13:0xca45ed9b3732da0b!5m2!4m1!1i2!8m2!3d35.0399322!4d-85.3071289!16s%2Fg%2F11f5488nmn">
               Dinner - The Moxy
@@ -163,37 +163,37 @@ const day1 = [
     url: "/steve-bussey",
   },
   {
-    time: "12:30 -  1:20",
+    time: "12:30 -  1:30",
     title: "Lunch",
   },
   {
-    time: " 1:20 -  1:50 ",
+    time: " 1:30 -  2:00 ",
     speaker: "Frank Hunleth",
     title: "Nerves Update",
     url: "/frank-hunleth",
   },
   {
-    time: " 1:50 -  2:20",
+    time: " 2:00 -  2:30",
     speaker: "Kimberly Erni",
     title: "From Self-Taught to First Job",
     url: "/kimberly-erni",
   },
-  { time: " 2:20 -  2:25", title: "Platinum Sponsor talk - Groxio" },
+  { time: " 2:30 -  2:35", title: "Platinum Sponsor talk - Groxio" },
   {
-    time: " 2:25 -  3:00",
+    time: " 2:35 -  3:10",
     speaker: "Elixir Chatt Panel -  Frank, Alexa, Bruce",
     title: "A Great Loop PCB Adventure",
   },
-  { time: " 3:00 -  3:15", title: "Break" },
-  { time: " 3:15 -  3:45", speaker: "Chris Keathley", url: "/chris-keathley" },
+  { time: " 3:10 -  3:25", title: "Break" },
+  { time: " 3:25 -  3:55", speaker: "Chris Keathley", url: "/chris-keathley" },
   {
-    time: " 3:45 -  4:30",
+    time: " 3:55 -  4:40",
     speaker: "Zach Daniel",
     title: "Domain Modeling, Elevated",
     url: "/zach-daniel",
   },
   {
-    time: " 4:30 -  5:00",
+    time: " 4:40 -  5:10",
     speaker: "Andrew Ek",
     title: "Better Forms with LiveView",
     url: "/andrew-ek",
