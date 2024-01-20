@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "https://ti.to/groxio-llc/gce24"
+  status = 302
